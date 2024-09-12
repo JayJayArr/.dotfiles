@@ -129,6 +129,3 @@ PATH=~/.console-ninja/.bin:$PATH
 export PATH="$PATH:/opt/nvim-linux64/bin"
 export PATH="$PATH:/usr/local/go/bin"
 
-
-# Load Angular CLI autocompletion.
-source <(ng completion script)
