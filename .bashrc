@@ -91,7 +91,7 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-alias ls='exa -al'
+alias ls='eza -al'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -128,4 +128,4 @@ PATH=~/.console-ninja/.bin:$PATH
 
 export PATH="$PATH:/opt/nvim-linux64/bin"
 export PATH="$PATH:/usr/local/go/bin"
-
+# oh-my-posh resdiding in /usr/local/bin
