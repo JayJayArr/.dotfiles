@@ -1,0 +1,9 @@
+/.cargo
+/.cache
+/.aws
+/.azure
+/.console-ninja
+/.local
+*/
+!.*/
+!.gitignore
