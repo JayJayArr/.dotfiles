@@ -127,5 +127,6 @@ eval "$(oh-my-posh init bash --config ~/.rietdorf.omp.json)"
 PATH=~/.console-ninja/.bin:$PATH
 
 export PATH="$PATH:/opt/nvim-linux64/bin"
+export PATH="$PATH:~/.local/share/bob/nvim-bin"
 export PATH="$PATH:/usr/local/go/bin"
 # oh-my-posh resdiding in /usr/local/bin
