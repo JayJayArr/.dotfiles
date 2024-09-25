@@ -4,6 +4,12 @@
 /.azure
 /.console-ninja
 /.local
+/.config/configstore/
 */
-!.*/
+.bash_history
+.bash_logout
+.bash_logout
+.python_history
+.lesshst
+.node_repl_history
 !.gitignore
