@@ -127,7 +127,7 @@
             "KC_LCBR",
             "KC_LBRC",
             "KC_QUOT",
-            "KC_PEQL",
+            "KC_EQL",
             "LSFT_T(KC_CIRC)",
             "KC_ASTR",
             "KC_AMPR",
@@ -220,7 +220,7 @@
             "KC_F2",
             "KC_F3",
             "KC_F12",
-            "KC_TRNS",
+            "KC_LALT",
             "KC_TRNS",
             "KC_TRNS",
             "KC_TRNS"
