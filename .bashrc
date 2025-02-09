@@ -92,6 +92,8 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias ls='eza -al'
+alias flashl = 'qmk flash -c -kb ferris/sweep -km JayJayArr -e CONVERT_TO=promicro_rp2040 --bootloader uf2-split-left'
+alias flashr = 'qmk flash -c -kb ferris/sweep -km JayJayArr -e CONVERT_TO=promicro_rp2040 --bootloader uf2-split-right'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
