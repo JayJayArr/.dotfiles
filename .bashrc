@@ -92,8 +92,8 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias ls='eza -al'
-alias flashl = 'qmk flash -c -kb ferris/sweep -km JayJayArr -e CONVERT_TO=promicro_rp2040 --bootloader uf2-split-left'
-alias flashr = 'qmk flash -c -kb ferris/sweep -km JayJayArr -e CONVERT_TO=promicro_rp2040 --bootloader uf2-split-right'
+alias flashl='qmk flash -c -kb ferris/sweep -km JayJayArr -e CONVERT_TO=promicro_rp2040 --bootloader uf2-split-left'
+alias flashr='qmk flash -c -kb ferris/sweep -km JayJayArr -e CONVERT_TO=promicro_rp2040 --bootloader uf2-split-right'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -128,11 +128,35 @@ eval "$(oh-my-posh init bash --config ~/.rietdorf.omp.json)"
 
 PATH=~/.console-ninja/.bin:$PATH
 
-export PATH="$PATH:/opt/nvim-linux64/bin"
 export PATH="$PATH:~/.local/share/bob/nvim-bin"
-export PATH="$PATH:/usr/local/go/bin"
+export PATH="$PATH:/home/jakob/go/bin"
+export PATH="$PATH:/home/jakob/.local/bin"
 # oh-my-posh resdiding in /usr/local/bin
 
 
 # Load Angular CLI autocompletion.
 source <(ng completion script)
+
+# Start SSH Agent
+env=~/.ssh/agent.env
+
+agent_load_env () { test -f "$env" && . "$env" >| /dev/null ; }
+
+agent_start () {
+    (umask 077; ssh-agent >| "$env")
+    . "$env" >| /dev/null ; }
+
+agent_load_env
+
+# agent_run_state: 0=agent running w/ key; 1=agent w/o key; 2=agent not running
+agent_run_state=$(ssh-add -l >| /dev/null 2>&1; echo $?)
+
+if [ ! "$SSH_AUTH_SOCK" ] || [ $agent_run_state = 2 ]; then
+    agent_start
+    ssh-add
+elif [ "$SSH_AUTH_SOCK" ] && [ $agent_run_state = 1 ]; then
+    ssh-add
+fi
+
+unset env
+
