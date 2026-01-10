@@ -1,11 +1,4 @@
-/.cargo
-/.cache
-/.aws
-/.azure
-/.console-ninja
 /.local
-/.config/configstore/
-*/
 .bash_history
 .bash_logout
 .bash_logout
