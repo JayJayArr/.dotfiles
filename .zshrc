@@ -107,7 +107,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 alias ls='eza -al'
-alias updateme='sudo apt update && sudo apt -y upgrade && sudo apt -y autoremove && sudo apt autoclean && rustup update stable && cargo install-update -a'
+alias updateme='sudo apt update && sudo apt -y upgrade && sudo apt -y autoremove && sudo apt autoclean && rustup update stable && cargo install-update -a && gup update'
 alias flashl='qmk flash -c -kb ferris/sweep -km JayJayArr -e CONVERT_TO=promicro_rp2040 --bootloader uf2-split-left'
 alias flashr='qmk flash -c -kb ferris/sweep -km JayJayArr -e CONVERT_TO=promicro_rp2040 --bootloader uf2-split-right'
 alias cat='bat'
