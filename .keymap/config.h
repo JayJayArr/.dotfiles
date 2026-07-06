@@ -37,7 +37,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define PERMISSIVE_HOLD
 #define QUICK_TAP_TERM 110
 #define FLOW_TAP_TERM 110
-#define CHORDAL_HOLD
+// #define CHORDAL_HOLD
 
 // Underglow configuration
 #ifdef RGBLIGHT_ENABLE
